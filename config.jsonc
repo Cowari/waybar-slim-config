@@ -1,0 +1,46 @@
+{
+  "name": "bar1",
+  "layer": "top",
+  "output": "DP-1",
+  "position": "top",
+  "height": 25,
+  //"width": 10,
+  "spacing": 5,
+  "modules-left": ["cpu", "memory", "disk", "temperature"],
+  "modules-center": ["clock"],
+  "modules-right": ["custom/network"],
+
+  "custom/battery": {
+    "exec": "~/.config/waybar/custom/battery.sh",
+    "interval": 1,
+    "return-type": "json"
+  },
+
+  "clock": {
+    "format": "{:%H:%M:%S}",
+    "interval": 1,
+    "tooltip": false
+  },
+
+  "custom/network": {
+    "exec": "~/.config/waybar/custom/network.sh",
+    "interval": 3,
+    "tooltip": true,
+    "return-type": "json"
+  },
+
+  "cpu": {
+    "format": " {usage}%"
+  },
+  "memory": {
+    "format": " {percentage}%",
+    "tooltip-format": "{used}/{total}"
+  },
+  "disk": {
+    "format": "󰋊 {percentage_used}%",
+    "tooltip-format": "{used}/{total}"
+  },
+  "temperature": {
+    "format": " {temperatureC}"
+  }
+}
