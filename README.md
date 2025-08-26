@@ -47,18 +47,20 @@ Or download the ZIP file and extract it.
    ```bash
    cp -r waybar-slim-config/* ~/.config/waybar/
    ```
-   
-3. Ensure the custom scripts are executable
+3. Set your display in file `config.jsonc`:
+   `output: "DP-1";`
+
+4. Ensure the custom scripts are executable
    ```bash
    chmod +x ~/.config/waybar/custom/*.sh
    ```
    
-4. Launch Waybar:
+5. Launch Waybar:
    ```bash
    waybar
    ```
    
-5. If you’re using Sway, add the following line to your config (~/.config/sway/config):
+6. If you’re using Sway, add the following line to your config (~/.config/sway/config):
    ```bash
    bar {
      swaybar_command waybar
